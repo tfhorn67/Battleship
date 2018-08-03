@@ -1,0 +1,11 @@
+{
+  "name": "bdd-battleship",
+  "version": "1.0.0",
+  "description": "A game of battleship, to be built w/ mocha+chai bdd methods as a way of practicing w/ mocha+chai.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Tennyson F. Horn",
+  "license": "ISC"
+}
