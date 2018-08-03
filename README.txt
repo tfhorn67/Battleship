@@ -8,7 +8,8 @@ testing and not turn it in to a full blown app.
 
 I'll make a good effort at all server-side and see what happens.
 
-Needs:
+Game Logic Needs:
+
 --to be capable of simulating the old battlefield board game logic, flow, procedures, etc.
     --two player's data
         --record of various ships for each player
@@ -26,5 +27,50 @@ Needs:
     --able to rotate through turns
 
     --able to determine when game is over
-    
+
     --able to determine who won
+
+Generally speaking, an outline of methods:
+
+Player methods:
+
+    placeShip(shipChoice, startingLocation, Direction)
+        --player states what ship and where to place.
+        --validateLocations is called to check placement validity
+        --if valid, ship is placed
+
+    fireShot(guessLocation, opposingPlayer)
+        --players lobs shot at a specified grid location on opposing players map
+        --checkForShip is called to check hit/miss status
+        --damageShip is called to record damage if hit
+        --checkGameStatus is called to initiate change of turns/end of game
+
+Ship methods:
+
+    checkForShip(player, location)
+        --loops through player ship locations for match against check location
+        --returns the ship array if ship is present at check location
+        --returns false if no ship is present at location
+
+    validateLocation(player, location)
+        --runs checkForShip(player, location)
+        --checks if location is within map boundaries
+        --true if valid location, else false
+
+    validateLocations(player, locations)
+        --runs validateLocation(player, locations[i]) on list of locations
+        --true if all valid, else false
+
+    damageShip(ship, coordinates)
+        --adds coordinates to the damage array associated w/ ship that was hit
+
+Game methods:
+
+    createGame(shipSet)
+        --instantiates a game w/ two player objects
+        --players each get empty boards, no damage, and the same set of ships to place
+
+    checkGameStatus(player1, player2)
+        --checks damage logs of each player against their ship logs
+            --if damage deep equal ships, game over
+            --else, next turn starts

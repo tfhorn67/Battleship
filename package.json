@@ -4,8 +4,13 @@
   "description": "A game of battleship, to be built w/ mocha+chai bdd methods as a way of practicing w/ mocha+chai.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:watch": "mocha --reporter min --watch ./test ./"
   },
   "author": "Tennyson F. Horn",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
 }
