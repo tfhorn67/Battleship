@@ -21,7 +21,7 @@ function checkForShip(playerObj, coordinateArr) {
 
 function validateLocation(playerObj, coordinateArr) {
     const spaceOpen = !checkForShip(playerObj, coordinateArr);
-
+    //make sure it's in domain and them make sure its unoccupied
     if ((coordinateArr[0] >= 0 && coordinateArr[0] <= 9) && (coordinateArr[1] >= 0 && coordinateArr[1] <= 9)) {
         return spaceOpen;
     } else {
@@ -30,7 +30,17 @@ function validateLocation(playerObj, coordinateArr) {
 
 }
 
+function validateLocations(playerObj, coordinatesArr) {
+    //map the array with validateLocation() to generate a list of booleans
+    let validated = coordinatesArr.map(function(coordinateArr){
+        return validateLocation(playerObj, coordinateArr);
+    });
+    //if no falses in list, return true. if false present, return false
+    return validated.indexOf(false) === -1;
+}
+
 module.exports = {
     checkForShip,
-    validateLocation
+    validateLocation,
+    validateLocations
 };

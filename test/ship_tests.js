@@ -84,7 +84,33 @@ describe('SHIP METHODS', function() {
     });
 
     describe('validateLocations', function() {
+        const validateLocations = require('../game_logic/ship_methods.js').validateLocations;
+        let player;
+        //Mock up a player object to pass into checkForShip tests
+        before(function() {
+            player = {
+                ships: [
+                    {
+                        locations: [[0, 0], [0, 1]]
+                    },
+                    {
+                        locations: [[1, 0], [1, 1], [1, 2]]
+                    },
+                    {
+                        locations: [[2, 0], [2, 1], [2, 2], [2, 3]]
+                    }
+                ]
+            }
+        });
 
+        it('should report valid if all locations are in domain and unoccupied', function() {
+            expect(validateLocations(player, [[5, 0], [5, 1], [5, 2], [5, 3]])).to.be.ok;
+        });
+
+        it('should report invalid if any location is occupied or out of domain', function() {
+            expect(validateLocations(player, [[5, 8], [5, 9], [5, 10]])).to.be.false;
+            expect(validateLocations(player, [[1, 3], [2, 3], [3, 3]])).to.be.false;
+        });
     });
 
     describe('damageShip', function() {
