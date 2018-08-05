@@ -47,12 +47,46 @@ describe('SHIP METHODS', function() {
         });
 
     });
+
     describe('validateLocation', function() {
+        const validateLocation = require('../game_logic/ship_methods.js').validateLocation;
+        let player;
+        //Mock up a player object to pass into checkForShip tests
+        before(function() {
+            player = {
+                ships: [
+                    {
+                        locations: [[0, 0], [0, 1]]
+                    },
+                    {
+                        locations: [[1, 0], [1, 1], [1, 2]]
+                    },
+                    {
+                        locations: [[2, 0], [2, 1], [2, 2], [2, 3]]
+                    }
+                ]
+            }
+        });
+
+        it('should report valid for unoccupied locations within board domain', function() {
+            //loosely equal to true should be fine here. mostly concerned with failing invalid locations
+            expect(validateLocation(player, [9, 9])).to.be.ok;
+        });
+
+        it('should report INvalid for occupied locations within board domain', function() {
+            expect(validateLocation(player, [0, 0])).to.be.false;
+        });
+
+        it('should report INvalid for ANY location outside of board domain', function () {
+            expect(validateLocation(player, [10, 10])).to.be.false;
+        });
 
     });
+
     describe('validateLocations', function() {
 
     });
+
     describe('damageShip', function() {
 
     });
