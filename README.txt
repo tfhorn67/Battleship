@@ -45,23 +45,23 @@ Player methods:
         --damageShip is called to record damage if hit
         --checkGameStatus is called to initiate change of turns/end of game
 
-Ship methods:
+✔ Ship methods:
 
-    checkForShip(player, location)
+  ✓ checkForShip(player, location)
         --loops through player ship locations for match against check location
         --returns the ship array if ship is present at check location
         --returns false if no ship is present at location
 
-    validateLocation(player, location)
+  ✓ validateLocation(player, location)
         --runs checkForShip(player, location)
         --checks if location is within map boundaries
         --true if valid location, else false
 
-    validateLocations(player, locations)
+  ✓ validateLocations(player, locations)
         --runs validateLocation(player, locations[i]) on list of locations
         --true if all valid, else false
 
-    damageShip(ship, coordinates)
+  ✓ damageShip(ship, coordinates)
         --adds coordinates to the damage array associated w/ ship that was hit
 
 Game methods:
