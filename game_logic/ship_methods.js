@@ -39,8 +39,13 @@ function validateLocations(playerObj, coordinatesArr) {
     return validated.indexOf(false) === -1;
 }
 
+function damageShip(shipObj, coordinatesArr) {
+    return shipObj.damage.push(coordinatesArr);
+}
+
 module.exports = {
     checkForShip,
     validateLocation,
-    validateLocations
+    validateLocations,
+    damageShip
 };

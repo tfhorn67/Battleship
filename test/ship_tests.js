@@ -114,6 +114,18 @@ describe('SHIP METHODS', function() {
     });
 
     describe('damageShip', function() {
+        const damageShip = require('../game_logic/ship_methods.js').damageShip
 
+        it('should assign damage to the specified coordinates on the a ship', function() {
+            let ship = {
+                locations: [[0,0]],
+                damage: []
+            };
+
+            damageShip(ship, [0, 0])
+
+            expect(ship.damage).to.not.be.empty;
+            expect(ship.damage[0]).to.deep.equal([0, 0]);
+        });
     });
 });
