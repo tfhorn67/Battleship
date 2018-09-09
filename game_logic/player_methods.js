@@ -32,9 +32,11 @@ function placeShip(playerObj, shipArr, startingLocation, shipDirection) {
     //So we need to check each of the coords & validate them, then reject/approve the proposal
     if ( validateLocations(playerObj, proposedLocations) ) {
         shipArr.locations = proposedLocations;
-    } else {
-        return false;
+        return true;
     }
+
+    //if we've made it this far, must be a reject proposal
+    return false;
 
 }
 

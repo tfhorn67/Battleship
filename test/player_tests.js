@@ -2,6 +2,8 @@ const expect = require('chai').expect;
 
 describe('PLAYER METHODS', function() {
 
+
+
     describe('placeShip', function() {
         const placeShip = require('../game_logic/player_methods.js').placeShip;
         //mock up player objects, with some ships assigned locations and others not
@@ -64,13 +66,16 @@ describe('PLAYER METHODS', function() {
             const coords = [0, 1];
 
             //should result in a conflict loc w/ horizontal placement from [0,1]...
-            placeShip(player, ship, coords, 'horizontal');
+            let handler = placeShip(player, ship, coords, 'horizontal');
             let placement = ship.locations;
 
+            expect(handler).to.be.false;
             expect(placement).to.have.length(0);
             expect(placement).to.deep.equal([]);
         });
     });
+
+
 
     describe('fireShot', function() {
 
