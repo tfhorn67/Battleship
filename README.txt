@@ -34,7 +34,7 @@ Generally speaking, an outline of methods:
 
 Player methods:
 
-    placeShip(shipChoice, startingLocation, Direction)
+    placeShip(player, shipChoice, startingLocation, Direction)
         --player states what ship and where to place.
         --validateLocations is called to check placement validity
         --if valid, ship is placed
