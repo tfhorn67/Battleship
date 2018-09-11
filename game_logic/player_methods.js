@@ -1,6 +1,7 @@
 const checkForShip = require('./ship_methods.js').checkForShip;
 const validateLocation = require('./ship_methods.js').validateLocation;
 const validateLocations = require('./ship_methods.js').validateLocations;
+const damageShip = require('./ship_methods.js').damageShip;
 
 
 function placeShip(playerObj, shipArr, startingLocation, shipDirection) {
@@ -41,7 +42,16 @@ function placeShip(playerObj, shipArr, startingLocation, shipDirection) {
 }
 
 function fireShot(guessLocationArr, opposingPlayerObj) {
+    let shipHere = checkForShip(opposingPlayerObj, guessLocationArr);
 
+    //checkForShip returns relevant ship object if ship present, or false if space is empty
+    if ( !shipHere ) {
+        //return false for no hit
+        return false;
+    }
+
+    //if past else block, ship is present, hit and subsequent damage should be recorded
+    return damageShip(shipHere, guessLocationArr);
 }
 
 module.exports = {

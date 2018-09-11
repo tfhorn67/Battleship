@@ -78,6 +78,40 @@ describe('PLAYER METHODS', function() {
 
 
     describe('fireShot', function() {
+        const fireShot = require('../game_logic/player_methods.js').fireShot;
+        //mock up player objects, with some ships assigned locations and others not
+        let opposingPlayer
+        beforeEach(function() {
+            opposingPlayer = {
+                ships: [
+                    {
+                        size: 1,
+                        locations: [[3, 3]],
+                        damage: [[3, 3]]
+                    },
+                    {
+                        size: 2,
+                        locations: [[1, 0], [1, 1]],
+                        damage: []
+                    },
+                    {
+                        size: 3,
+                        locations: [[4, 5], [5, 5], [5, 6]],
+                        damage: []
+                    }
+                ]
+            };
+        });
 
+        it('should return false if no hit', function() {
+            let volley = fireShot([9, 9], opposingPlayer);
+            expect(volley).to.be.false;
+        });
+
+        it('should return true if hit', function() {
+            fireShot([1, 0], opposingPlayer);
+            let hitShipDamage = opposingPlayer.ships[1].damage[0];
+            expect(hitShipDamage).to.deep.equal([1, 0]);
+        });
     });
 });
