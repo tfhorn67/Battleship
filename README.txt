@@ -39,7 +39,7 @@ Player methods:
         --validateLocations is called to check placement validity
         --if valid, ship is placed
 
-    fireShot(guessLocation, opposingPlayer)
+  ✓ fireShot(guessLocation, opposingPlayer)
         --players lobs shot at a specified grid location on opposing players map
         --checkForShip is called to check hit/miss status
         --damageShip is called to record damage if hit
@@ -66,11 +66,17 @@ Player methods:
 
 Game methods:
 
-    createGame(shipSet)
-        --instantiates a game w/ two player objects
+    initiateState
+        --instantiates a starting game state w/ two player objects
         --players each get empty boards, no damage, and the same set of ships to place
+            -- 10x10 own/opponent grids (view should reflect this, game logic will control this implicitly)
+            -- 1 x aircraft carrier (length 5)
+            -- 1 x battleship (length 4)
+            -- 1 x cruiser (length 3)
+            -- 2 x destroyer (length 2)
+            -- 2 x submarine (length 1)
 
     checkGameStatus(player1, player2)
         --checks damage logs of each player against their ship logs
-            --if damage deep equal ships, game over
+            --if each ships.damage deep equal ships.locations, game over
             --else, next turn starts

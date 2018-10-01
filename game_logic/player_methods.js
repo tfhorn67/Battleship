@@ -1,3 +1,5 @@
+//see ../test/player_tests.js for unit tests
+
 const checkForShip = require('./ship_methods.js').checkForShip;
 const validateLocation = require('./ship_methods.js').validateLocation;
 const validateLocations = require('./ship_methods.js').validateLocations;

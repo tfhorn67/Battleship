@@ -3,7 +3,6 @@ const expect = require('chai').expect;
 describe('PLAYER METHODS', function() {
 
 
-
     describe('placeShip', function() {
         const placeShip = require('../game_logic/player_methods.js').placeShip;
         //mock up player objects, with some ships assigned locations and others not
@@ -74,7 +73,6 @@ describe('PLAYER METHODS', function() {
             expect(placement).to.deep.equal([]);
         });
     });
-
 
 
     describe('fireShot', function() {
