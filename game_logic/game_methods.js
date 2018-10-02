@@ -52,6 +52,10 @@ function initiatePlayer() {
     return startingPlayerObj;
 }
 
+// function switchTurns() {
+//
+// }
+
 module.exports = {
     initiatePlayer: initiatePlayer
     //switchTurns: switchTurns,

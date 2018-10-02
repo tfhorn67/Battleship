@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Battleship</title>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="sidebarContainer">
+        <ul>
+            <li><h4>Control Panel</h4><hr/></li>
+            <li><button id="fireShot"><label>Fire Shot</label></button></li>
+            <li><button><label>Do Something</label></button></li>
+            <li><button><label>And Other Things</label></button></li>
+            <li><button><label>More Buttons, Please!</label></button></li>
+        </ul>
+    </div>
+
+    <div id="bodyContainer">
+    	<div id="fieldOfFire">
+            <h4>Opponent Grid</h4>
+
+    		<div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+    	</div><!-- end fieldOfFire div -->
+
+    <br>
+
+        <div id="playerField">
+            <h4>Player Grid</h4>
+    		<div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+
+            <div class="flexcon keyrow">
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+    			<div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+                <div class="flexitem"><p></p></div>
+    		</div><!-- end of row -->
+    	</div><!-- end fieldOfFire div -->
+    </div>
+
+
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="calculator.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
