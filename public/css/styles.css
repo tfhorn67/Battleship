@@ -601,7 +601,7 @@ SIDEBAR
     border: solid 1px gray;
 }
 
-#sidebarContainer > ul {
+#sidebarContainer ul {
     list-style: none;
 }
 

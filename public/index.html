@@ -4,7 +4,7 @@
 <head>
 	<title>Battleship</title>
 	<meta charset="utf-8">
-	<link href="styles.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -13,9 +13,23 @@
         <ul>
             <li><h4>Control Panel</h4><hr/></li>
             <li><button id="fireShot"><label>Fire Shot</label></button></li>
-            <li><button><label>Do Something</label></button></li>
-            <li><button><label>And Other Things</label></button></li>
-            <li><button><label>More Buttons, Please!</label></button></li>
+			<form id="placeShip">
+				<li><input type=submit value="Place Ship"></input></li>
+	            <ul>
+					<li><input type="radio" name="ship"><label>Aircraft Carrier</label></input></li>
+					<li><input type="radio" name="ship"><label>Battleship</label></input></li>
+					<li><input type="radio" name="ship"><label>Cruiser</label></input></li>
+					<li><input type="radio" name="ship"><label>Destroyer 1</label></input></li>
+					<li><input type="radio" name="ship"><label>Destroyer 2</label></input></li>
+					<li><input type="radio" name="ship"><label>Submarine 1</label></input></li>
+					<li><input type="radio" name="ship"><label>Submarine 2</label></input></li>
+					<hr>
+					<li><input type="radio" name="direction"><label>Horizontal</label></input></li>
+					<li><input type="radio" name="direction"><label>Vertical</label></input></li>
+					<hr>
+					<li><label>Start Point</label><input type="text" name="startPoint" placeholder="[0, 0] - [9, 9]"></label></li>
+				</ul>
+			</form>
         </ul>
     </div>
 
@@ -293,7 +307,7 @@
 
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="calculator.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/controller.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
