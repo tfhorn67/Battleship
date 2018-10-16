@@ -52,12 +52,16 @@ function initiatePlayer() {
     return startingPlayerObj;
 }
 
-// function switchTurns() {
-//
-// }
+function switchTurns(player) {
+    if (player === 1) {
+        return player = 2;
+    } else {
+        return player = 1;
+    }
+}
 
 module.exports = {
-    initiatePlayer: initiatePlayer
-    //switchTurns: switchTurns,
+    initiatePlayer: initiatePlayer,
+    switchTurns: switchTurns
     //checkGameStatus: checkGameStatus
 }

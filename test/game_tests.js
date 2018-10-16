@@ -64,7 +64,18 @@ describe('GAME METHODS', function() {
     });
 
 
-    describe('checkGameStatus', function() {
+    describe('switchTurns', function() {
+        const switchTurns = require('../game_logic/game_methods.js').switchTurns;
 
+        it('Should switch current player from 1 to 2', function() {
+            let currentPlayer = 1;
+            currentPlayer = switchTurns(currentPlayer);
+            expect(currentPlayer).to.equal(2);
+        });
+        it('Should switch current player from 2 to 1', function() {
+            let currentPlayer = 2;
+            currentPlayer = switchTurns(currentPlayer);
+            expect(currentPlayer).to.equal(1);
+        });
     });
 });

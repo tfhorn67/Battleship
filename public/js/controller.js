@@ -6,14 +6,6 @@
                             PLAYER METHODS
     **************************************************************************************************/
 
-    //see ../test/player_tests.js for unit tests
-
-    // const checkForShip = require('./ship_methods.js').checkForShip;
-    // const validateLocation = require('./ship_methods.js').validateLocation;
-    // const validateLocations = require('./ship_methods.js').validateLocations;
-    // const damageShip = require('./ship_methods.js').damageShip;
-
-
     function placeShip(playerObj, shipArr, startingLocation, shipDirection) {
         if ( !shipDirection ) {
             throw Error('Hey, you forgot the direction. I need that for maths!');
@@ -64,12 +56,6 @@
         return damageShip(shipHere, guessLocationArr);
     }
 
-    // module.exports = {
-    //     placeShip: placeShip,
-    //     fireShot: fireShot
-    // }
-
-
     /**************************************************************************************************
                             /PLAYER METHODS
     **************************************************************************************************/
@@ -77,8 +63,6 @@
     /**************************************************************************************************
                             SHIP METHODS
     **************************************************************************************************/
-
-    //see ../test/ship_tests.js for unit tests
 
     function checkForShip(playerObj, coordinateArr) {
         let shipIsPresent; //indicator
@@ -123,13 +107,6 @@
         return shipObj.damage.push(coordinatesArr);
     }
 
-    // module.exports = {
-    //     checkForShip,
-    //     validateLocation,
-    //     validateLocations,
-    //     damageShip
-    // };
-
     /**************************************************************************************************
                             /SHIP METHODS
     **************************************************************************************************/
@@ -137,7 +114,6 @@
     /**************************************************************************************************
                             GAME METHODS
     **************************************************************************************************/
-
 
     function initiatePlayer() {
         let startingPlayerObj = {
@@ -192,15 +168,13 @@
         return startingPlayerObj;
     }
 
-    // function switchTurns() {
-    //
-    // }
-
-    // module.exports = {
-    //     initiatePlayer: initiatePlayer
-    //     //switchTurns: switchTurns,
-    //     //checkGameStatus: checkGameStatus
-    // }
+    function switchTurns(player) {
+        if (player === 1) {
+            return player = 2;
+        } else {
+            return player = 1;
+        }
+    }
 
     /**************************************************************************************************
                             /GAME METHODS
@@ -215,6 +189,7 @@
         const placeShip = document.getElementById('placeShip');
         player1 = initiatePlayer();
         player2 = initiatePlayer();
+        currentPlayer = player1;
 
         fireShot.addEventListener('click', (event) => {
             alert('shots fired!');
