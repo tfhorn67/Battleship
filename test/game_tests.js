@@ -63,18 +63,6 @@ describe('GAME METHODS', function() {
         });
     });
 
-    describe('turnIncrement', function() {
-        const turnIncrement = require('../game_logic/game_methods.js').turnIncrement;
-
-        it('should increment the turn count succesfully', function() {
-            let turnCount = 1;
-            turnCount = turnIncrement(turnCount);
-
-            expect(turnCount).to.equal(2);
-        });
-    });
-
-
     describe('switchTurns', function() {
         const switchTurns = require('../game_logic/game_methods.js').switchTurns;
 
