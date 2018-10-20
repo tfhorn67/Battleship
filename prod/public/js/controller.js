@@ -1,8 +1,4 @@
 //!function() { //wrapper IFFE
-    let player1,
-        player2,
-        currentPlayer,
-        turnCounter;
 
     /**************************************************************************************************
                             PLAYER METHODS
@@ -190,13 +186,13 @@
         const fireShot = document.getElementById('fireShot');
         const placeShip = document.getElementById('placeShip');
         //initiate players and game
-        player1 = initiatePlayer();
-        player2 = initiatePlayer();
-        currentPlayer = 1;
-        turnCounter = 0;
+        let player1 = initiatePlayer();
+        let player2 = initiatePlayer();
+        let currentPlayer = 1;
+        let turnCounter = 0;
 
         placeShip.addEventListener('submit', (event) => {
-
+            
         });
 
         fireShot.addEventListener('click', (event) => {
