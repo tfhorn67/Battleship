@@ -66,15 +66,70 @@ describe('GAME METHODS', function() {
     describe('switchTurns', function() {
         const switchTurns = require('../game_logic/game_methods.js').switchTurns;
 
-        it('Should switch current player from 1 to 2', function() {
-            let currentPlayer = 1;
-            currentPlayer = switchTurns(currentPlayer);
-            expect(currentPlayer).to.equal(2);
+        let player1, player2;
+        beforeEach(function() {
+            player1 = {
+                ships: [
+                    {
+                        name: 'Aircraft Carrier',
+                        size: 5,
+                        locations: [],
+                        damage: []
+                    },
+                    {
+                        name: 'Destroyer 1',
+                        size: 2,
+                        locations: [],
+                        damage: []
+                    },
+                    {
+                        name: 'Submarine 1',
+                        size: 1,
+                        locations: [],
+                        damage: []
+                    },
+                ],
+                missedShots: [],
+                confirmedHits: []
+            };
+
+            player2 = {
+                ships: [
+                    {
+                        name: 'Battleship',
+                        size: 4,
+                        locations: [],
+                        damage: []
+                    },
+                    {
+                        name: 'Destroyer 2',
+                        size: 2,
+                        locations: [],
+                        damage: []
+                    },
+                    {
+                        name: 'Submarine 2',
+                        size: 1,
+                        locations: [],
+                        damage: []
+                    },
+                ],
+                missedShots: [],
+                confirmedHits: []
+            };
+        });
+
+        it('Should switch current player from player1 to player2', function() {
+            let currentPlayer = player1;
+            let turn = 0;
+            currentPlayer = switchTurns(turn, player1, player2);
+            expect(currentPlayer).to.deep.equal(player2);
         });
         it('Should switch current player from 2 to 1', function() {
-            let currentPlayer = 2;
-            currentPlayer = switchTurns(currentPlayer);
-            expect(currentPlayer).to.equal(1);
+            let currentPlayer = player2;
+            turn = 1;
+            currentPlayer = switchTurns(turn, player1, player2);
+            expect(currentPlayer).to.deep.equal(player1);
         });
     });
 });

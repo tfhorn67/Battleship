@@ -53,11 +53,11 @@ function initiatePlayer() {
 }
 
 //keep a currentPlayer variable. switchTurns alternates current player btw. 1 & 2.
-function switchTurns(player) {
-    if (player === 1) {
-        return player = 2;
+function switchTurns(turn, player1Obj, player2Obj) {
+    if (turn === 0 || turn%2 === 0) {
+        return player2Obj;
     } else {
-        return player = 1;
+        return player1Obj;
     }
 }
 
