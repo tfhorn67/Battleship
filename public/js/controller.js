@@ -187,18 +187,19 @@
     document.addEventListener('DOMContentLoaded', () => {
         const fireShot = document.getElementById('fireShot');
         const placeShip = document.getElementById('placeShip');
+        //initiate players and game
         player1 = initiatePlayer();
         player2 = initiatePlayer();
-        currentPlayer = player1;
-
-        fireShot.addEventListener('click', (event) => {
-            alert('shots fired!');
-        });
+        currentPlayer = 0;
 
         placeShip.addEventListener('submit', (event) => {
-            alert('ships Placed!');
+
         });
 
+        fireShot.addEventListener('click', (event) => {
+            //finally, switch turns
+            currentPlayer = switchTurns(currentPlayer);
+        });
     });
 
     /**************************************************************************************************

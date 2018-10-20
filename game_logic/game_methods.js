@@ -52,6 +52,13 @@ function initiatePlayer() {
     return startingPlayerObj;
 }
 
+//increment the turn number
+function turnIncrement(turnCount) {
+    turnCount++;
+    return turnCount;
+}
+
+//keep a currentPlayer variable. switchTurns alternates current player btw. 1 & 2.
 function switchTurns(player) {
     if (player === 1) {
         return player = 2;
@@ -62,6 +69,7 @@ function switchTurns(player) {
 
 module.exports = {
     initiatePlayer: initiatePlayer,
+    turnIncrement: turnIncrement,
     switchTurns: switchTurns
     //checkGameStatus: checkGameStatus
 }
